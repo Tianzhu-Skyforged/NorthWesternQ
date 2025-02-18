@@ -1,0 +1,5 @@
+ SELECT COUNT(Student_id) FROM {
+        SELECT Student_id FROM submission
+                GROUP BY Student_id
+                HAVING(COUNT(Submit_date > 1))
+    }
